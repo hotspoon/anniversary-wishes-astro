@@ -1,0 +1,330 @@
+---
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anniversary Wishes</title>
+    <meta
+      name="description"
+      content="A romantic anniversary wishes experience made with love."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500&family=Parisienne&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/brittany-signature"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- ========== GLOBAL STARS BG (persists across all scenes) ========== -->
+    <canvas id="starsCanvas" class="stars-canvas-global"></canvas>
+
+    <!-- ========== AUDIO ========== -->
+    <audio id="bgMusic" loop>
+      <source src="/keshi_soft_spot_lyrics.mp3" type="audio/mpeg" />
+    </audio>
+    <!-- ========== MUSIC CONTROL ========== -->
+    <div id="musicControl" class="music-btn">
+      <button
+        id="muteBtn"
+        type="button"
+        title="Toggle Music"
+        aria-label="Toggle music"
+      >
+        <span id="musicIcon">🎵</span>
+      </button>
+    </div>
+
+    <!-- ========== CURSOR HEARTS ========== -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <!-- ========== SCENE 0: COUNTDOWN ========== -->
+    <section id="scene-countdown" class="scene active">
+      <!-- Background Effects -->
+      <div class="countdown-bg"></div>
+      <div class="countdown-particles" id="countdownParticles"></div>
+      <div class="countdown-fog"></div>
+
+      <div class="countdown-container">
+        <div class="countdown-msg-wrapper">
+          <p id="countdownMessage" class="countdown-message"></p>
+        </div>
+        <div id="countdownTimer" class="countdown-timer">
+          00 DAYS : 00 HOURS : 00 MINUTES : 00 SECONDS
+        </div>
+        <div
+          class="enter-btn-wrapper"
+          id="enterBtnWrapper"
+          style="display: none"
+        >
+          <button id="enterBtn" class="enter-btn" type="button">
+            Enter Your Surprise ✨
+          </button>
+        </div>
+        <div class="open-sooner-wrapper" id="openSoonerWrapper">
+          <button id="openSoonerBtn" class="open-sooner-btn" type="button">
+            Open sooner?
+          </button>
+        </div>
+      </div>
+
+      <!-- Password Modal -->
+      <div id="passwordModal" class="password-modal">
+        <div class="password-modal-content">
+          <p class="password-prompt">Enter the magic word, love.</p>
+          <input
+            type="password"
+            id="passwordInput"
+            class="password-input"
+            placeholder="..."
+          />
+          <button id="passwordSubmit" class="password-submit" type="button">
+            Unlock
+          </button>
+          <p id="passwordError" class="password-error"></p>
+          <button id="closeModalBtn" class="close-modal-btn" type="button">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SCENE 1: UNLOCK MY HEART ========== -->
+    <section id="scene-unlock" class="scene">
+      <div class="floating-hearts-bg" id="floatingHeartsBg"></div>
+
+      <div class="unlock-container">
+        <div class="unlock-center">
+          <div class="unlock-top-text">
+            <p class="pre-text">You were always the key to my heart.</p>
+          </div>
+
+          <div class="lock-key-area">
+            <!-- HEART LOCK -->
+            <div class="heart-lock" id="heartLock">
+              <svg
+                class="heart-lock-svg"
+                viewBox="0 0 120 110"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <radialGradient id="heartGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffd6ea" />
+                    <stop offset="55%" stop-color="#ff9fcf" />
+                    <stop offset="100%" stop-color="#4fb477" />
+                  </radialGradient>
+                  <filter id="heartGlow">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Heart shape -->
+                <path
+                  class="heart-path"
+                  d="M60 95 C60 95 10 65 10 35 C10 18 22 8 35 8 C44 8 52 13 60 22 C68 13 76 8 85 8 C98 8 110 18 110 35 C110 65 60 95 60 95Z"
+                  filter="url(#heartGlow)"
+                />
+                <!-- Lock body -->
+                <rect
+                  class="lock-body"
+                  x="43"
+                  y="50"
+                  width="34"
+                  height="26"
+                  rx="5"
+                  ry="5"
+                />
+                <!-- Lock shackle -->
+                <path
+                  class="lock-shackle"
+                  d="M50 50 L50 40 Q60 28 70 40 L70 50"
+                  fill="none"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+                <!-- Keyhole -->
+                <circle class="keyhole" cx="60" cy="62" r="5" />
+                <rect
+                  class="keyhole"
+                  x="57"
+                  y="62"
+                  width="6"
+                  height="8"
+                  rx="2"
+                />
+              </svg>
+              <div class="heart-glow-ring"></div>
+            </div>
+
+            <!-- DRAGGABLE KEY -->
+            <div class="key-wrapper" id="keyWrapper">
+              <div class="key-drag" id="keyDrag" draggable="true">
+                <svg
+                  class="key-svg"
+                  viewBox="0 0 80 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="keyGrad"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stop-color="#fff3a6" />
+                      <stop offset="50%" stop-color="#ffd84f" />
+                      <stop offset="100%" stop-color="#4fb477" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Key ring -->
+                  <circle
+                    cx="14"
+                    cy="15"
+                    r="11"
+                    fill="none"
+                    stroke="url(#keyGrad)"
+                    stroke-width="4"
+                  />
+                  <circle cx="14" cy="15" r="5" fill="url(#keyGrad)" />
+                  <!-- Key shaft -->
+                  <rect
+                    x="24"
+                    y="13"
+                    width="42"
+                    height="4"
+                    rx="2"
+                    fill="url(#keyGrad)"
+                  />
+                  <!-- Key teeth -->
+                  <rect
+                    x="52"
+                    y="17"
+                    width="4"
+                    height="7"
+                    rx="1"
+                    fill="url(#keyGrad)"
+                  />
+                  <rect
+                    x="60"
+                    y="17"
+                    width="4"
+                    height="5"
+                    rx="1"
+                    fill="url(#keyGrad)"
+                  />
+                </svg>
+                <span class="key-hint">drag me ✨</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="sub-text" id="subText">Can you unlock it?</p>
+          <p class="miss-text" id="missText"></p>
+        </div>
+      </div>
+
+      <!-- UNLOCK TRANSITION OVERLAY (soft elegant fade) -->
+      <div class="unlock-overlay" id="unlockOverlay"></div>
+    </section>
+
+    <!-- ========== SCENE 2: ANNIVERSARY REVEAL ========== -->
+    <section id="scene-birthday" class="scene">
+      <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+      <canvas id="petalCanvas" class="petal-canvas"></canvas>
+      <div class="particles-bg" id="particlesBg"></div>
+
+      <div class="birthday-container">
+        <!-- HAPPY ANNIVERSARY big reveal -->
+        <div class="birthday-header" id="birthdayHeader">
+          <h1 class="birthday-title" id="birthdayTitle">
+            Happy Anniversary<br /><span class="birthday-name"
+              >Azlia Saraswati</span
+            >
+          </h1>
+          <div class="birthday-subtitle-spacer"></div>
+          <p class="birthday-subtitle" id="birthdaySubtitle">
+            to the love I am grateful for every single day.
+          </p>
+        </div>
+
+        <!-- Messages — Nazz BD style: absolute centered, one at a time -->
+        <div class="wish-container" id="wishContainer" style="display: none">
+          <!-- Wish items created dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SCENE 3: FINAL EMOTIONAL ENDING ========== -->
+    <section id="scene-ending" class="scene">
+      <div class="ending-bg"></div>
+      <div class="ending-particles" id="endingParticles"></div>
+
+      <div class="ending-scroll-wrapper">
+        <div class="ending-container">
+          <div class="ending-ornament-top">❤️</div>
+          <p class="ending-text" id="endingText"></p>
+          <div class="ending-ornament-bottom">✦ ✦ ✦</div>
+          <button
+            class="gallery-btn"
+            id="galleryBtn"
+            type="button"
+            style="display: none"
+          >
+            See Her Beautiful Smile 🌸
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SCENE 4: HANGING PHOTO GALLERY ========== -->
+    <section id="scene-gallery" class="scene">
+      <div class="gallery-bg"></div>
+      <div class="gallery-particles" id="galleryParticles"></div>
+
+      <div class="gallery-scroll-wrapper">
+        <div class="gallery-container">
+          <!-- Top 4 featured hanging frames -->
+          <div class="featured-frames" id="featuredFrames">
+            <!-- Generated by JS: left photo (tall), video, video, right photo (tall) -->
+          </div>
+
+          <!-- Center title -->
+          <div class="gallery-header">
+            <div class="gallery-ornament">✦ ✦ ✦</div>
+            <h2 class="gallery-title">She Has The Most Beautiful Smile</h2>
+            <p class="gallery-subtitle">
+              And every memory with her is another reason I am thankful for our
+              story.
+            </p>
+            <div class="gallery-ornament">✦ ✦ ✦</div>
+          </div>
+
+          <!-- Remaining media grid -->
+          <div class="remaining-gallery" id="remainingGallery">
+            <!-- Remaining items generated by JS -->
+          </div>
+
+          <div class="gallery-footer">
+            <p class="gallery-footer-text">
+              Happy anniversary, my love. Thank you for being my favorite part
+              of every day. ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/script.js" is:inline></script>
+  </body>
+</html>
