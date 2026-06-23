@@ -4,9 +4,13 @@ import { confettiCanvas, randomBetween, randomFrom, px, setCanvasSize } from "..
 
 let confettiPieces = [];
 export let confettiActive = false;
+let drawRafId = null;
 
 export function setConfettiActive(value) {
   confettiActive = value;
+  if (value && drawRafId === null) {
+    draw();
+  }
 }
 
 export function initConfetti() {
@@ -22,7 +26,7 @@ export function initConfetti() {
     "#4fb477",
     "#fff8ca",
   ];
-  confettiPieces = Array.from({ length: 120 }, () => ({
+  confettiPieces = Array.from({ length: 80 }, () => ({
     x: Math.random() * confettiCanvas.width,
     y: Math.random() * -confettiCanvas.height,
     type: randomFrom(confettiTypes),
@@ -39,6 +43,7 @@ export function initConfetti() {
     alpha: randomBetween(0.5, 1),
   }));
 
+  // Confetti starts inactive — setConfettiActive(true) will start the loop
   confettiActive = false;
 
   function drawStar(size) {
@@ -98,12 +103,13 @@ export function initConfetti() {
   }
 
   function draw() {
+    ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+
     if (!confettiActive) {
-      ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-      requestAnimationFrame(draw);
+      drawRafId = null;
       return;
     }
-    ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+
     confettiPieces.forEach((p) => {
       p.wobble += p.wobbleSpeed;
       p.x += p.vx + Math.sin(p.wobble) * 0.55;
@@ -122,7 +128,6 @@ export function initConfetti() {
       drawConfettiPiece(p);
       ctx.restore();
     });
-    requestAnimationFrame(draw);
+    drawRafId = requestAnimationFrame(draw);
   }
-  draw();
 }

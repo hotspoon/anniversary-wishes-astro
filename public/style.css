@@ -378,12 +378,9 @@ body {
   }
   100% {
     opacity: 0;
-    transform: translate(
-        calc(-50% + var(--spark-dx)),
-        calc(-50% + var(--spark-dy))
-      )
-      scale(1.15)
-      rotate(var(--spark-rotate));
+    transform: translate(-50%, -50%) scale(1.15) rotate(var(--spark-rotate));
+    left: var(--spark-to-x);
+    top: var(--spark-to-y);
   }
 }
 

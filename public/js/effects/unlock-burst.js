@@ -20,8 +20,8 @@ export function triggerUnlockBurst() {
     spark.textContent = randomFrom(sparkGlyphs);
     spark.style.setProperty("--spark-x", px(centerX));
     spark.style.setProperty("--spark-y", px(centerY));
-    spark.style.setProperty("--spark-dx", px(Math.cos(angle) * distance));
-    spark.style.setProperty("--spark-dy", px(Math.sin(angle) * distance));
+    spark.style.setProperty("--spark-to-x", px(centerX + Math.cos(angle) * distance));
+    spark.style.setProperty("--spark-to-y", px(centerY + Math.sin(angle) * distance));
     spark.style.setProperty("--spark-size", px(randomBetween(12, 28)));
     spark.style.setProperty("--spark-rotate", `${randomBetween(-160, 160)}deg`);
     spark.style.setProperty("--spark-color", randomFrom(sparkColors));
