@@ -5,19 +5,23 @@ import { confettiCanvas, randomBetween, randomFrom, px, setCanvasSize } from "..
 let confettiPieces = [];
 export let confettiActive = false;
 let drawRafId = null;
+let ctx = null;
+let confettiTypes = [];
+let colors = [];
+let drawLoop = null;
 
 export function setConfettiActive(value) {
   confettiActive = value;
-  if (value && drawRafId === null) {
-    draw();
+  if (value && drawRafId === null && drawLoop) {
+    drawLoop();
   }
 }
 
 export function initConfetti() {
   setCanvasSize(confettiCanvas);
-  const ctx = confettiCanvas.getContext("2d");
-  const confettiTypes = ["petal", "star", "heart", "leaf", "ribbon"];
-  const colors = [
+  ctx = confettiCanvas.getContext("2d");
+  confettiTypes = ["petal", "star", "heart", "leaf", "ribbon"];
+  colors = [
     "#ff9fcf",
     "#fff08a",
     "#9be7c5",
@@ -43,66 +47,10 @@ export function initConfetti() {
     alpha: randomBetween(0.5, 1),
   }));
 
-  // Confetti starts inactive — setConfettiActive(true) will start the loop
   confettiActive = false;
 
-  function drawStar(size) {
-    const points = 5;
-    ctx.beginPath();
-    for (let i = 0; i < points * 2; i++) {
-      const radius = i % 2 === 0 ? size : size * 0.42;
-      const angle = -Math.PI / 2 + (i * Math.PI) / points;
-      const x = Math.cos(angle) * radius;
-      const y = Math.sin(angle) * radius;
-      if (i === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    }
-    ctx.closePath();
-    ctx.fill();
-  }
-
-  function drawHeart(size) {
-    ctx.beginPath();
-    ctx.moveTo(0, size * 0.38);
-    ctx.bezierCurveTo(-size, -size * 0.18, -size * 0.55, -size, 0, -size * 0.42);
-    ctx.bezierCurveTo(size * 0.55, -size, size, -size * 0.18, 0, size * 0.38);
-    ctx.fill();
-  }
-
-  function drawPetalShape(size) {
-    ctx.beginPath();
-    ctx.moveTo(0, -size);
-    ctx.bezierCurveTo(size * 0.75, -size * 0.42, size * 0.55, size * 0.5, 0, size);
-    ctx.bezierCurveTo(-size * 0.55, size * 0.5, -size * 0.75, -size * 0.42, 0, -size);
-    ctx.fill();
-  }
-
-  function drawLeaf(size) {
-    ctx.beginPath();
-    ctx.moveTo(0, -size);
-    ctx.bezierCurveTo(size * 0.95, -size * 0.2, size * 0.55, size * 0.74, 0, size);
-    ctx.bezierCurveTo(-size * 0.7, size * 0.35, -size * 0.82, -size * 0.45, 0, -size);
-    ctx.fill();
-    ctx.strokeStyle = "rgba(255,255,255,0.32)";
-    ctx.lineWidth = 0.6;
-    ctx.beginPath();
-    ctx.moveTo(0, -size * 0.55);
-    ctx.lineTo(0, size * 0.55);
-    ctx.stroke();
-  }
-
-  function drawConfettiPiece(piece) {
-    ctx.fillStyle = piece.color;
-    if (piece.type === "star") drawStar(piece.size * 0.72);
-    else if (piece.type === "heart") drawHeart(piece.size * 0.75);
-    else if (piece.type === "petal") drawPetalShape(piece.size * 0.82);
-    else if (piece.type === "leaf") drawLeaf(piece.size * 0.72);
-    else {
-      ctx.fillRect(-piece.w / 2, -piece.h / 2, piece.w, piece.h);
-    }
-  }
-
-  function draw() {
+  // Store draw loop reference so setConfettiActive can start/stop it
+  drawLoop = function draw() {
     ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
 
     if (!confettiActive) {
@@ -129,5 +77,61 @@ export function initConfetti() {
       ctx.restore();
     });
     drawRafId = requestAnimationFrame(draw);
+  };
+}
+
+function drawStar(size) {
+  const points = 5;
+  ctx.beginPath();
+  for (let i = 0; i < points * 2; i++) {
+    const radius = i % 2 === 0 ? size : size * 0.42;
+    const angle = -Math.PI / 2 + (i * Math.PI) / points;
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+    if (i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawHeart(size) {
+  ctx.beginPath();
+  ctx.moveTo(0, size * 0.38);
+  ctx.bezierCurveTo(-size, -size * 0.18, -size * 0.55, -size, 0, -size * 0.42);
+  ctx.bezierCurveTo(size * 0.55, -size, size, -size * 0.18, 0, size * 0.38);
+  ctx.fill();
+}
+
+function drawPetalShape(size) {
+  ctx.beginPath();
+  ctx.moveTo(0, -size);
+  ctx.bezierCurveTo(size * 0.75, -size * 0.42, size * 0.55, size * 0.5, 0, size);
+  ctx.bezierCurveTo(-size * 0.55, size * 0.5, -size * 0.75, -size * 0.42, 0, -size);
+  ctx.fill();
+}
+
+function drawLeaf(size) {
+  ctx.beginPath();
+  ctx.moveTo(0, -size);
+  ctx.bezierCurveTo(size * 0.95, -size * 0.2, size * 0.55, size * 0.74, 0, size);
+  ctx.bezierCurveTo(-size * 0.7, size * 0.35, -size * 0.82, -size * 0.45, 0, -size);
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.32)";
+  ctx.lineWidth = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(0, -size * 0.55);
+  ctx.lineTo(0, size * 0.55);
+  ctx.stroke();
+}
+
+function drawConfettiPiece(piece) {
+  ctx.fillStyle = piece.color;
+  if (piece.type === "star") drawStar(piece.size * 0.72);
+  else if (piece.type === "heart") drawHeart(piece.size * 0.75);
+  else if (piece.type === "petal") drawPetalShape(piece.size * 0.82);
+  else if (piece.type === "leaf") drawLeaf(piece.size * 0.72);
+  else {
+    ctx.fillRect(-piece.w / 2, -piece.h / 2, piece.w, piece.h);
   }
 }
