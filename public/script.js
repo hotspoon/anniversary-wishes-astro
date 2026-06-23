@@ -26,7 +26,7 @@ const TIMING = {
 };
 
 const TARGET_ANNIVERSARY_UTC = Date.UTC(2026, 5, 27, 17, 0, 0);
-const EARLY_UNLOCK_PASSWORD = "mylove";
+const EARLY_UNLOCK_PASSWORD = "sayangku";
 
 const countdownMessages = [
   "Sebentar lagi ya, sayang.",
@@ -93,7 +93,7 @@ const mediaFiles = [
   { src: "photos/573c6d61-d171-4802-93af-ceb39a6787d4.jpg", type: "image", caption: "Momen yang mau aku simpan lama 💕" },
   { src: "photos/5b48d167-7264-427d-9e1f-e7550724cab5.jpg", type: "image", caption: "Kamu itu spesial banget 🦋" },
   { src: "photos/64a45dc1-3657-47ff-b56c-8e6eeba14722.jpg", type: "image", caption: "Lihat kamu aja udah seneng 🌷" },
-  { src: "photos/7117d64d-3287-40c6-b454-bcd20a1195ad.jpg", type: "image", caption: "Terima kasih sudah ada 🌻" },
+  { src: "photos/7117d64d-3287-40c6-b454-bcd20a1195ad.jpg", type: "image", caption: "Terima kasih sudah ada 🌻", objectPosition: "center top" },
   { src: "photos/720b539d-149b-486f-bdad-2c3479c03e36.jpg", type: "image", caption: "Bersamamu rasanya hangat ☀️" },
   { src: "photos/76bb1f22-47e8-4c12-a22e-558e1b5e1808.jpg", type: "image", caption: "Kamu rumahku 🏡" },
   { src: "photos/9200e5f1-036f-44ea-b534-cfe638536b26.jpg", type: "image", caption: "Canda tawa kita favoritku 😆" },
@@ -1072,6 +1072,9 @@ function createMediaElement(media, className) {
     element.src = media.src;
     element.alt = media.caption;
     element.loading = "lazy";
+    if (media.objectPosition) {
+      element.style.objectPosition = media.objectPosition;
+    }
   }
 
   return element;
