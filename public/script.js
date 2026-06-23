@@ -81,53 +81,52 @@ const finalMessage = `Azlia Saraswati, makasih ya sudah hadir di hidupku.\n\nAku
 
 // All media files — June photo slots use the newest available uploads.
 const mediaFiles = [
-  {
-    src: "photos/whatsapp_image_2026_06_18_at_19_34_47.jpeg",
-    type: "image",
-    caption: "Senyum yang bikin kangen 💕",
-  },
-  {
-    src: "photos/whatsapp_image_2026_06_18_at_19_35_18.jpeg",
-    type: "image",
-    caption: "Yang paling aku cari 🌸",
-  },
-  {
-    src: "photos/whatsapp_image_2026_06_18_at_19_35_42.jpeg",
-    type: "image",
-    caption: "Orang favoritku ❤️",
-  },
-  {
-    src: "photos/whatsapp_image_2026_06_18_at_19_37_34.jpeg",
-    type: "image",
-    caption: "Selalu cantik 💖",
-  },
-  {
-    src: "photos/placeholder.png",
-    type: "image",
-    caption: "Belum ada foto baru 19 Juni",
-    missing: true,
-  },
-  {
-    src: "photos/whatsapp_image_2026_05_23_10_49_46_pm.jpeg",
-    type: "image",
-    caption: "Kamu dan semua gemasmu 🌟",
-  },
-  {
-    src: "photos/whatsapp_image_2026_05_23_10_49_46_pm_2.jpeg",
-    type: "image",
-    caption: "Selalu punya cara bikin aku senyum 💫",
-  },
-  {
-    src: "photos/whatsapp_image_2026_05_23_10_49_46_pm_4.jpeg",
-    type: "image",
-    caption: "Aku suka banget momen ini 🌹",
-  },
-  { src: "photos/whatsapp_image_2026_05_23_11_02_58_pm.jpeg", type: "image", caption: "Bahagia yang sederhana ✨" },
-  {
-    src: "photos/whatsapp_image_2026_05_23_11_02_58_pm_1.jpeg",
-    type: "image",
-    caption: "Momen yang mau aku simpan lama 💕",
-  },
+  { src: "photos/06af5522-bebc-4bd7-a4fd-c9a736572b2e.jpg", type: "image", caption: "Senyum yang bikin kangen 💕" },
+  { src: "photos/0c662fc8-a4f9-476f-a4f4-e3aca31bd922.jpg", type: "image", caption: "Yang paling aku cari 🌸" },
+  { src: "photos/15561f40-4577-4dbb-b411-454e558889ef.jpg", type: "image", caption: "Orang favoritku ❤️" },
+  { src: "photos/1b946bb8-ac36-4532-a075-be4a4e127fd8.jpg", type: "image", caption: "Cantiknya kamu tuh ✨" },
+  { src: "photos/2c424ea7-710a-4f8f-a0e9-9f2d17ffe124.jpg", type: "image", caption: "Setiap momen berharga 💖" },
+  { src: "photos/351862f1-0bbe-4aa3-a5bd-107f1e33fd33.jpg", type: "image", caption: "Kamu dan semua gemasmu 🌟" },
+  { src: "photos/3d257f97-6cb3-4a76-968a-0c6b473a56ee.jpg", type: "image", caption: "Selalu punya cara bikin aku senyum 💫" },
+  { src: "photos/452fb7df-5a15-4652-a79d-676c21eaa954.jpg", type: "image", caption: "Aku suka banget momen ini 🌹" },
+  { src: "photos/4ec86829-3f84-4a3b-92ce-5c99edd61291.jpg", type: "image", caption: "Bahagia yang sederhana ✨" },
+  { src: "photos/573c6d61-d171-4802-93af-ceb39a6787d4.jpg", type: "image", caption: "Momen yang mau aku simpan lama 💕" },
+  { src: "photos/5b48d167-7264-427d-9e1f-e7550724cab5.jpg", type: "image", caption: "Kamu itu spesial banget 🦋" },
+  { src: "photos/64a45dc1-3657-47ff-b56c-8e6eeba14722.jpg", type: "image", caption: "Lihat kamu aja udah seneng 🌷" },
+  { src: "photos/7117d64d-3287-40c6-b454-bcd20a1195ad.jpg", type: "image", caption: "Terima kasih sudah ada 🌻" },
+  { src: "photos/720b539d-149b-486f-bdad-2c3479c03e36.jpg", type: "image", caption: "Bersamamu rasanya hangat ☀️" },
+  { src: "photos/76bb1f22-47e8-4c12-a22e-558e1b5e1808.jpg", type: "image", caption: "Kamu rumahku 🏡" },
+  { src: "photos/9200e5f1-036f-44ea-b534-cfe638536b26.jpg", type: "image", caption: "Canda tawa kita favoritku 😆" },
+  { src: "photos/97d703e2-5bd0-42a1-bde5-fe613f0e984a.jpg", type: "image", caption: "Selalu cantik di mataku 💎" },
+  { src: "photos/99719dd7-83bf-45d6-93f7-9e09eaa0cfe5.jpg", type: "image", caption: "Momen kecil, kenangan besar 🎈" },
+  { src: "photos/9abc809c-4a8f-4877-b655-1c1b57643fe6.jpg", type: "image", caption: "Kamu alasan aku tersenyum 😊" },
+  { src: "photos/b7f9cecd-f164-470e-9908-db3877cdb2f8.jpg", type: "image", caption: "Bidadari di hidupku 👼" },
+  { src: "photos/IMG_0054.jpg", type: "image", caption: "Kamu tuh beda dari yang lain 💫" },
+  { src: "photos/IMG_0159.jpg", type: "image", caption: "Hadir kamu, hadir bahagiaku 💝" },
+  { src: "photos/IMG_0243.jpg", type: "image", caption: "Jatuh cinta setiap hari 🌈" },
+  { src: "photos/IMG_0418.jpg", type: "image", caption: "Peluk erat dari jauh 🫂" },
+  { src: "photos/IMG_0436.jpg", type: "image", caption: "Paling ngerti aku cuma kamu 🥺" },
+  { src: "photos/IMG_0685.jpg", type: "image", caption: "Kamu layak dapat yang terbaik 🌟" },
+  { src: "photos/IMG_0912.jpg", type: "image", caption: "Makasih udah jadi support systemku 💪" },
+  { src: "photos/IMG_1230.jpg", type: "image", caption: "Kamu kebahagiaanku yang nyata 🎁" },
+  { src: "photos/IMG_1570.jpg", type: "image", caption: "Tatapan kamu tuh dalem banget 👀" },
+  { src: "photos/IMG_1610.jpg", type: "image", caption: "Dunia lebih indah kalo ada kamu 🌍" },
+  { src: "photos/IMG_1748.jpg", type: "image", caption: "Bersamamu gak pernah bosen 💞" },
+  { src: "photos/IMG_2205.jpg", type: "image", caption: "Mimpi yang jadi nyata 🌙" },
+  { src: "photos/IMG_2278.jpg", type: "image", caption: "Aku bangga punya kamu 🥇" },
+  { src: "photos/IMG_2367.jpg", type: "image", caption: "Satu senyummu cukup buat aku 🦄" },
+  { src: "photos/IMG_2645.jpg", type: "image", caption: "Hari-hariku lebih berwarna 🎨" },
+  { src: "photos/IMG_2947.jpg", type: "image", caption: "Kamu definisi perfect buatku 💯" },
+  { src: "photos/IMG_2985.jpg", type: "image", caption: "Selalu jadi alasan aku bertahan 🌱" },
+  { src: "photos/IMG_7601.jpg", type: "image", caption: "Bersyukur setiap hari ada kamu 🙏" },
+  { src: "photos/IMG_7609.jpg", type: "image", caption: "Kamu rumah ternyaman untuk pulang 💒" },
+  { src: "photos/IMG_7968.jpg", type: "image", caption: "Yang aku sayang, cuma kamu 💌" },
+  { src: "photos/IMG_8332.jpg", type: "image", caption: "Masa depan kita pasti indah 🗺️" },
+  { src: "photos/IMG_8336.jpg", type: "image", caption: "Till the end, with you 💍" },
+  { src: "photos/b9b82d39-b58c-48d4-85a0-58f474ed7420.JPG", type: "image", caption: "Potongan puzzle hidupku 🧩" },
+  { src: "photos/f3b1a5f7-a590-4ffe-8d4d-b3955432dbf3.JPG", type: "image", caption: "Kamu adalah takdirku 🔮" },
+  { src: "photos/FD3760CE-B920-4F94-BCBE-31FCC9BAA38F.JPG", type: "image", caption: "Anugerah terindah dalam hidupku 🎀" },
+  { src: "photos/placeholder.png", type: "image", caption: "Masih banyak foto kita nanti...", missing: true },
 ];
 
 // ============================================
@@ -1088,25 +1087,14 @@ function createCaption(text, className) {
 function buildFeaturedFrames() {
   featuredFrames.replaceChildren();
 
-  const photos = mediaFiles.filter((m) => m.type === "image");
-
-  // Find the specific photos requested for the featured polaroid frames
-  const photoLeft =
-    mediaFiles.find(
-      (m) =>
-        m.caption && m.caption.toLowerCase().includes("paling aku cari"),
-    ) || photos[0];
-  const photoRight =
-    mediaFiles.find(
-      (m) => m.caption && m.caption.toLowerCase().includes("orang favoritku"),
-    ) || photos[1];
+  const photos = mediaFiles.filter((m) => m.type === "image" && !m.missing);
 
   // [photo(tall), photo(short), photo(short), photo(tall)]
   const featured = [
-    { ...photoLeft, layout: "tall" },
-    { ...photos[5], layout: "short" },
-    { ...photos[6], layout: "short" },
-    { ...photoRight, layout: "tall" },
+    { ...photos[1], layout: "tall" },
+    { ...photos[7], layout: "short" },
+    { ...photos[12], layout: "short" },
+    { ...photos[2], layout: "tall" },
   ];
 
   const ornamentEmojis = ["🎀", "⭐", "💫", "🌸"];
