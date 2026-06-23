@@ -26,106 +26,107 @@ const TIMING = {
 };
 
 const TARGET_ANNIVERSARY_UTC = Date.UTC(2026, 5, 27, 17, 0, 0);
-const EARLY_UNLOCK_PASSWORD = "iloveyoutothemoonandback,mywife";
+const EARLY_UNLOCK_PASSWORD = "mylove";
 
 const countdownMessages = [
-  "Some moments are worth waiting for.",
-  "Patience, my love.",
-  "A little longer, pretty girl.",
-  "Your surprise is waiting for midnight.",
-  "The best part is coming.",
-  "Almost time, baby.",
-  "Not yet… but soon.",
-  "Our story keeps getting more beautiful.",
-  "You're getting closer ❤️",
-  "The universe is preparing something beautiful for you.",
+  "Sebentar lagi ya, sayang.",
+  "Aku sengaja bikin kamu nunggu dikit.",
+  "Tenang, ini bukan prank kok.",
+  "Kejutannya nunggu waktu yang pas.",
+  "Dikit lagi sampai harinya kita.",
+  "Sabar ya, cantik.",
+  "Belum boleh dibuka... tapi hampir.",
+  "Lucu juga ya, kita sudah sejauh ini.",
+  "Makin dekat ❤️",
+  "Aku harap nanti kamu suka.",
 ];
 
 const passwordWrongMessages = [
-  "That's not it, baby 🤍",
-  "Almost, my love.",
-  "Try again, pretty girl.",
-  "You're cute when you try.",
-  "Closer ❤️",
+  "Belum itu, sayang 🤍",
+  "Hampir kok.",
+  "Coba lagi ya, cantik.",
+  "Kamu lucu banget pas nebak.",
+  "Dikit lagi ❤️",
 ];
 
 const messages = [
-  "Happy anniversary to the girl who made love feel like home.",
-  "Azlia Saraswati, you are my favorite person, my safest place, and my happiest feeling.",
-  "Being with you makes my world softer, warmer, and brighter.",
-  "I still feel lucky every time I remember that I get to call you mine.",
-  "Your smile is still my favorite thing in this world.",
-  "You turn ordinary days into memories I want to keep forever.",
-  "Thank you for every laugh, every conversation, every quiet moment, and every little piece of love you give me.",
-  "If I could choose again, I would still choose you every single time.",
-  "You are genuinely one of the most precious parts of my life.",
-  "You are not just beautiful, you are unforgettable.",
-  "Thank you for staying with me, loving me, and being patient with me.",
-  "I'm sorry for every mistake, every misunderstanding, and every moment I made your heart feel heavy.",
-  "No matter what happens, I will always love you, care about you, and choose us.",
-  "Today, I hope you feel how much this relationship means to me.",
-  "Happy anniversary, my love ❤️",
+  "Selamat anniversary ya, sayang.",
+  "Azlia Saraswati, makasih sudah jadi orang yang paling aku tunggu kabarnya.",
+  "Sama kamu, hal-hal kecil rasanya jadi lebih enak dijalani.",
+  "Aku masih sering ngerasa beruntung karena bisa punya kamu.",
+  "Senyum kamu masih jadi salah satu hal favoritku.",
+  "Banyak hari biasa yang jadi kerasa spesial cuma karena ada kamu di dalamnya.",
+  "Makasih buat tawa, cerita random, marah kecil, perhatian kecil, dan semua sabar kamu.",
+  "Kalau harus milih lagi dari awal, aku tetap bakal pilih kamu.",
+  "Kamu bukan cuma pacarku, kamu rumah yang sering aku cari saat capek.",
+  "Aku suka cara kamu hadir, bahkan di hal-hal yang kelihatannya sederhana.",
+  "Makasih sudah bertahan sama aku, walau aku belum selalu jadi orang yang mudah.",
+  "Maaf untuk salahku, untuk ego yang kadang kebawa, dan untuk hari-hari waktu aku bikin kamu sedih.",
+  "Aku masih mau belajar jadi lebih baik buat kamu, pelan-pelan tapi beneran.",
+  "Semoga hari ini kamu ngerasa dicintai, bukan cuma dari kata-kata ini.",
+  "Selamat anniversary, sayang. Aku sayang kamu ❤️",
 ];
 
 const missMessages = [
-  "Almost there, baby ❤️",
-  "Closer…",
-  "You already have my heart anyway.",
-  "Try again, pretty girl.",
-  "My heart only opens for you.",
-  "So close, my love 💕",
-  "A little more… you can do it ✨",
+  "Hampir, sayang ❤️",
+  "Dikit lagi...",
+  "Sebenernya hatiku sudah punya kamu dari lama.",
+  "Coba lagi ya, cantik.",
+  "Kuncinya cuma cocok buat kamu.",
+  "Dekat banget itu 💕",
+  "Pelan-pelan, kamu pasti bisa ✨",
 ];
 
-const finalMessage = `Azlia Saraswati, you are one of the best things that has ever happened to me.\n\nThank you for staying, for loving me, for being patient with me, and for choosing this story with me.\n\nI know I'm not perfect, but my feelings for you are real, and I want to keep learning how to love you better.\n\nNo matter how much time passes, I will always look at you with the same admiration, love, and warmth.\n\nHappy anniversary, my love. ❤️`;
+const finalMessage = `Azlia Saraswati, makasih ya sudah hadir di hidupku.\n\nAku tahu aku belum sempurna. Kadang aku salah ngomong, salah paham, atau telat sadar kalau kamu lagi butuh dimengerti.\n\nTapi perasaanku ke kamu serius. Aku sayang kamu, dan aku masih mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih sudah sabar, sudah bertahan, sudah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, bahkan di hari-hari yang nggak selalu mudah.\n\nSelamat anniversary, sayang. Aku sayang kamu. ❤️`;
 
-// All media files — new.mp4 replaces bottom center video
+// All media files — June photo slots use the newest available uploads.
 const mediaFiles = [
+  {
+    src: "photos/whatsapp_image_2026_06_18_at_19_34_47.jpeg",
+    type: "image",
+    caption: "Senyum yang bikin kangen 💕",
+  },
+  {
+    src: "photos/whatsapp_image_2026_06_18_at_19_35_18.jpeg",
+    type: "image",
+    caption: "Yang paling aku cari 🌸",
+  },
+  {
+    src: "photos/whatsapp_image_2026_06_18_at_19_35_42.jpeg",
+    type: "image",
+    caption: "Orang favoritku ❤️",
+  },
+  {
+    src: "photos/whatsapp_image_2026_06_18_at_19_37_34.jpeg",
+    type: "image",
+    caption: "Selalu cantik 💖",
+  },
+  {
+    src: "photos/placeholder.png",
+    type: "image",
+    caption: "Belum ada foto baru 19 Juni",
+    missing: true,
+  },
   {
     src: "photos/whatsapp_image_2026_05_23_10_49_46_pm.jpeg",
     type: "image",
-    caption: "That beautiful smile 💕",
+    caption: "Kamu dan semua gemasmu 🌟",
   },
   {
     src: "photos/whatsapp_image_2026_05_23_10_49_46_pm_2.jpeg",
     type: "image",
-    caption: "Extraordinary soul ✨",
+    caption: "Selalu punya cara bikin aku senyum 💫",
   },
   {
     src: "photos/whatsapp_image_2026_05_23_10_49_46_pm_4.jpeg",
     type: "image",
-    caption: "The one who lights up my world 🌸",
+    caption: "Aku suka banget momen ini 🌹",
   },
-  {
-    src: "photos/whatsapp_image_2026_05_23_11_02_58_pm.jpeg",
-    type: "image",
-    caption: "My favorite person ❤️",
-  },
+  { src: "photos/whatsapp_image_2026_05_23_11_02_58_pm.jpeg", type: "image", caption: "Bahagia yang sederhana ✨" },
   {
     src: "photos/whatsapp_image_2026_05_23_11_02_58_pm_1.jpeg",
     type: "image",
-    caption: "Simply stunning 💖",
-  },
-  {
-    src: "photos/whatsapp_video_2026_05_23_10_49_47_pm.mp4",
-    type: "video",
-    caption: "You & your magic 🌟",
-  },
-  {
-    src: "photos/whatsapp_video_2026_05_23_10_49_47_pm_1.mp4",
-    type: "video",
-    caption: "So full of life 💫",
-  },
-  {
-    src: "photos/whatsapp_video_2026_05_23_10_49_47_pm_2.mp4",
-    type: "video",
-    caption: "Breathtaking 🌹",
-  },
-  { src: "photos/new.mp4", type: "video", caption: "Pure happiness ✨" },
-  {
-    src: "photos/whatsapp_video_2026_05_23_10_49_47_pm_4.mp4",
-    type: "video",
-    caption: "This moment, forever 💕",
+    caption: "Momen yang mau aku simpan lama 💕",
   },
 ];
 
@@ -136,6 +137,7 @@ const getElement = (id) => document.getElementById(id);
 
 const dom = {
   bgMusic: getElement("bgMusic"),
+  musicControl: getElement("musicControl"),
   musicIcon: getElement("musicIcon"),
   muteBtn: getElement("muteBtn"),
   starsCanvas: getElement("starsCanvas"),
@@ -173,6 +175,7 @@ const dom = {
 
 const {
   bgMusic,
+  musicControl,
   musicIcon,
   muteBtn,
   starsCanvas,
@@ -219,6 +222,7 @@ const sceneMap = {
 const randomFrom = (items) => items[Math.floor(Math.random() * items.length)];
 const randomBetween = (min, max) => Math.random() * (max - min) + min;
 const px = (value) => `${value}px`;
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
 function setCanvasSize(canvas) {
   if (!canvas) return;
@@ -464,6 +468,34 @@ function triggerPetalBurst() {
   animatePetals();
 }
 
+function triggerUnlockBurst() {
+  const rect = heartLock.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+  const sparkGlyphs = ["✦", "✧", "✨", "♡", "✺"];
+  const sparkColors = ["#ff9fcf", "#fff08a", "#9be7c5", "#ffd84f"];
+
+  heartLock.classList.add("unlocking");
+  setTimeout(() => heartLock.classList.remove("unlocking"), 2500);
+
+  Array.from({ length: 38 }, () => {
+    const spark = document.createElement("span");
+    const angle = Math.random() * Math.PI * 2;
+    const distance = randomBetween(70, 210);
+    spark.className = "unlock-spark";
+    spark.textContent = randomFrom(sparkGlyphs);
+    spark.style.setProperty("--spark-x", px(centerX));
+    spark.style.setProperty("--spark-y", px(centerY));
+    spark.style.setProperty("--spark-dx", px(Math.cos(angle) * distance));
+    spark.style.setProperty("--spark-dy", px(Math.sin(angle) * distance));
+    spark.style.setProperty("--spark-size", px(randomBetween(12, 28)));
+    spark.style.setProperty("--spark-rotate", `${randomBetween(-160, 160)}deg`);
+    spark.style.setProperty("--spark-color", randomFrom(sparkColors));
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 1400);
+  });
+}
+
 // ============================================
 // CURSOR HEARTS
 // ============================================
@@ -487,7 +519,7 @@ document.addEventListener("mousemove", (e) => {
       vy: -Math.random() * 2 - 1,
       size: randomBetween(6, 16),
       alpha: 0.85,
-      emoji: randomFrom(["❤️", "💕"]),
+      emoji: randomFrom(["💗", "✨", "🌸", "⭐"]),
     });
   }
 });
@@ -526,7 +558,7 @@ function drawCursor() {
 function spawnFloatingHeart(container) {
   const heart = document.createElement("span");
   heart.className = "float-heart";
-  heart.textContent = randomFrom(["❤️", "💕", "💗", "💖", "💓"]);
+  heart.textContent = randomFrom(["💗", "💕", "✨", "🌸", "⭐"]);
   heart.style.fontSize = px(randomBetween(10, 30));
   heart.style.left = `${Math.random() * 100}vw`;
   heart.style.bottom = "-40px";
@@ -553,48 +585,104 @@ let confettiActive = false;
 function initConfetti() {
   setCanvasSize(confettiCanvas);
   const ctx = confettiCanvas.getContext("2d");
-  const colors = [
-    "#ff9fcf",
-    "#fff08a",
-    "#9be7c5",
-    "#f05f9d",
-    "#ffd84f",
-    "#4fb477",
-    "#ffffff",
-    "#fff8ca",
-  ];
+  const confettiTypes = ["petal", "star", "heart", "leaf", "ribbon"];
+  const colors = ["#ff9fcf", "#fff08a", "#9be7c5", "#f05f9d", "#ffd84f", "#4fb477", "#fff8ca"];
   confettiPieces = Array.from({ length: 120 }, () => ({
     x: Math.random() * confettiCanvas.width,
     y: Math.random() * -confettiCanvas.height,
-    w: randomBetween(5, 15),
-    h: randomBetween(3, 8),
+    type: randomFrom(confettiTypes),
+    size: randomBetween(7, 17),
+    w: randomBetween(6, 16),
+    h: randomBetween(4, 10),
     color: randomFrom(colors),
     rotation: Math.random() * Math.PI * 2,
-    rotSpeed: (Math.random() - 0.5) * 0.1,
-    vx: (Math.random() - 0.5) * 2,
-    vy: randomBetween(1, 3),
-    alpha: randomBetween(0.4, 1),
+    rotSpeed: randomBetween(-0.08, 0.08),
+    vx: randomBetween(-1.1, 1.1),
+    vy: randomBetween(0.8, 2.6),
+    wobble: Math.random() * Math.PI * 2,
+    wobbleSpeed: randomBetween(0.012, 0.04),
+    alpha: randomBetween(0.5, 1),
   }));
+
+  function drawStar(size) {
+    const points = 5;
+    ctx.beginPath();
+    for (let i = 0; i < points * 2; i++) {
+      const radius = i % 2 === 0 ? size : size * 0.42;
+      const angle = -Math.PI / 2 + (i * Math.PI) / points;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function drawHeart(size) {
+    ctx.beginPath();
+    ctx.moveTo(0, size * 0.38);
+    ctx.bezierCurveTo(-size, -size * 0.18, -size * 0.55, -size, 0, -size * 0.42);
+    ctx.bezierCurveTo(size * 0.55, -size, size, -size * 0.18, 0, size * 0.38);
+    ctx.fill();
+  }
+
+  function drawPetalShape(size) {
+    ctx.beginPath();
+    ctx.moveTo(0, -size);
+    ctx.bezierCurveTo(size * 0.75, -size * 0.42, size * 0.55, size * 0.5, 0, size);
+    ctx.bezierCurveTo(-size * 0.55, size * 0.5, -size * 0.75, -size * 0.42, 0, -size);
+    ctx.fill();
+  }
+
+  function drawLeaf(size) {
+    ctx.beginPath();
+    ctx.moveTo(0, -size);
+    ctx.bezierCurveTo(size * 0.95, -size * 0.2, size * 0.55, size * 0.74, 0, size);
+    ctx.bezierCurveTo(-size * 0.7, size * 0.35, -size * 0.82, -size * 0.45, 0, -size);
+    ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,0.32)";
+    ctx.lineWidth = 0.6;
+    ctx.beginPath();
+    ctx.moveTo(0, -size * 0.55);
+    ctx.lineTo(0, size * 0.55);
+    ctx.stroke();
+  }
+
+  function drawConfettiPiece(piece) {
+    ctx.fillStyle = piece.color;
+    if (piece.type === "star") drawStar(piece.size * 0.72);
+    else if (piece.type === "heart") drawHeart(piece.size * 0.75);
+    else if (piece.type === "petal") drawPetalShape(piece.size * 0.82);
+    else if (piece.type === "leaf") drawLeaf(piece.size * 0.72);
+    else {
+      ctx.fillRect(-piece.w / 2, -piece.h / 2, piece.w, piece.h);
+    }
+  }
+
   function draw() {
     if (!confettiActive) {
       ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      requestAnimationFrame(draw);
       return;
     }
     ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
     confettiPieces.forEach((p) => {
-      p.x += p.vx;
+      p.wobble += p.wobbleSpeed;
+      p.x += p.vx + Math.sin(p.wobble) * 0.55;
       p.y += p.vy;
       p.rotation += p.rotSpeed;
       if (p.y > confettiCanvas.height + 20) {
         p.y = -20;
         p.x = Math.random() * confettiCanvas.width;
+        p.type = randomFrom(confettiTypes);
+        p.color = randomFrom(colors);
       }
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rotation);
       ctx.globalAlpha = p.alpha;
-      ctx.fillStyle = p.color;
-      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      drawConfettiPiece(p);
       ctx.restore();
     });
     requestAnimationFrame(draw);
@@ -722,6 +810,7 @@ function triggerUnlock() {
   if (state.unlocked) return;
   state.unlocked = true;
   heartLock.classList.add("near");
+  triggerUnlockBurst();
   startMusic();
 
   // Phase 1: gentle warm glow from center
@@ -838,7 +927,8 @@ function showWish(text, isLast) {
   return new Promise((resolve) => {
     const wishEl = document.createElement("div");
     wishEl.className = "wish-item";
-    wishEl.innerText = text;
+    buildWishText(wishEl, text);
+    addWishSparks(wishEl);
 
     wishContainer.appendChild(wishEl);
 
@@ -851,7 +941,9 @@ function showWish(text, isLast) {
     });
 
     // Display time: last message stays much longer
-    const displayTime = isLast ? TIMING.finalWishDuration : TIMING.wishDuration;
+    const displayTime = isLast
+      ? TIMING.finalWishDuration
+      : Math.max(TIMING.wishDuration, 1900 + text.split(/\s+/).length * 95);
 
     setTimeout(() => {
       // Fade out with scale + float up
@@ -863,6 +955,58 @@ function showWish(text, isLast) {
         resolve();
       }, TIMING.wishFadeDuration);
     }, displayTime);
+  });
+}
+
+function buildWishText(container, text) {
+  const accentWords = new Set([
+    "anniversary",
+    "Azlia",
+    "Saraswati,",
+    "sayang.",
+    "sayang",
+    "beruntung",
+    "Senyum",
+    "favoritku.",
+    "pilih",
+    "rumah",
+    "capek.",
+    "bertahan",
+    "Maaf",
+    "serius.",
+    "dicintai,",
+    "kamu",
+  ]);
+
+  text.split(/(\s+)/).forEach((token, index) => {
+    if (/^\s+$/.test(token)) {
+      container.appendChild(document.createTextNode(token));
+      return;
+    }
+
+    const span = document.createElement("span");
+    span.className = "wish-word";
+    if (accentWords.has(token)) span.classList.add("accent");
+    span.textContent = token;
+    span.style.setProperty("--word-delay", `${clamp(index * 0.045, 0, 1.8)}s`);
+    container.appendChild(span);
+  });
+}
+
+function addWishSparks(container) {
+  const sparkGlyphs = ["✦", "✧", "✨"];
+  const sparkColors = ["#ff9fcf", "#fff08a", "#9be7c5"];
+
+  Array.from({ length: 7 }, () => {
+    const spark = document.createElement("span");
+    spark.className = "wish-spark";
+    spark.textContent = randomFrom(sparkGlyphs);
+    spark.style.setProperty("--spark-top", `${randomBetween(8, 88)}%`);
+    spark.style.setProperty("--spark-left", `${randomBetween(5, 95)}%`);
+    spark.style.setProperty("--spark-size", px(randomBetween(10, 20)));
+    spark.style.setProperty("--spark-delay", `${randomBetween(0.15, 1.6)}s`);
+    spark.style.setProperty("--spark-color", randomFrom(sparkColors));
+    container.appendChild(spark);
   });
 }
 
@@ -917,6 +1061,7 @@ function createMediaElement(media, className) {
     media.type === "video" ? "video" : "img",
   );
   element.className = className;
+  if (media.missing) element.classList.add("missing-media");
 
   if (media.type === "video") {
     element.src = media.src;
@@ -944,25 +1089,23 @@ function buildFeaturedFrames() {
   featuredFrames.replaceChildren();
 
   const photos = mediaFiles.filter((m) => m.type === "image");
-  const videos = mediaFiles.filter((m) => m.type === "video");
 
   // Find the specific photos requested for the featured polaroid frames
   const photoLeft =
     mediaFiles.find(
       (m) =>
-        m.caption &&
-        m.caption.toLowerCase().includes("the one who lights up my world"),
+        m.caption && m.caption.toLowerCase().includes("paling aku cari"),
     ) || photos[0];
   const photoRight =
     mediaFiles.find(
-      (m) => m.caption && m.caption.toLowerCase().includes("favorite person"),
+      (m) => m.caption && m.caption.toLowerCase().includes("orang favoritku"),
     ) || photos[1];
 
-  // [photo(tall), video(short), video(short), photo(tall)]
+  // [photo(tall), photo(short), photo(short), photo(tall)]
   const featured = [
     { ...photoLeft, layout: "tall" },
-    { ...videos[0], layout: "short" },
-    { ...videos[1], layout: "short" },
+    { ...photos[5], layout: "short" },
+    { ...photos[6], layout: "short" },
     { ...photoRight, layout: "tall" },
   ];
 
@@ -988,6 +1131,7 @@ function buildFeaturedFrames() {
 
     const card = document.createElement("div");
     card.className = "hang-card";
+    if (media.missing) card.classList.add("missing-slot");
     card.append(
       createMediaElement(media, "hang-media"),
       createCaption(media.caption, "hang-caption"),
@@ -1029,6 +1173,7 @@ function createRemainingItem(media, i) {
 
   const card = document.createElement("div");
   card.className = "remaining-card";
+  if (media.missing) card.classList.add("missing-slot");
   card.append(
     createMediaElement(media, "remaining-media"),
     createCaption(media.caption, "remaining-caption"),
@@ -1058,6 +1203,7 @@ function startParticles(containerId) {
       "🌸",
       "💖",
       "⭐",
+      "🌿",
     ]);
     particle.style.fontSize = px(randomBetween(8, 26));
     particle.style.left = `${Math.random() * 100}vw`;
@@ -1102,13 +1248,12 @@ function initCountdown() {
     if (distance <= 0) {
       countdownInterval = clearTimer(countdownInterval);
       messageInterval = clearTimer(messageInterval);
-      countdownTimer.textContent =
-        "00 DAYS : 00 HOURS : 00 MINUTES : 00 SECONDS";
+      countdownTimer.textContent = "00 HARI : 00 JAM : 00 MENIT : 00 DETIK";
       hideElement(openSoonerWrapper);
 
       countdownMessage.classList.remove("visible");
       setTimeout(() => {
-        countdownMessage.textContent = "Happy anniversary, my love! ❤️";
+        countdownMessage.textContent = "Selamat anniversary, sayang! ❤️";
         countdownMessage.classList.add("visible");
       }, 1000);
 
@@ -1126,7 +1271,7 @@ function initCountdown() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     const pad = (n) => n.toString().padStart(2, "0");
-    countdownTimer.textContent = `${pad(days)} DAYS : ${pad(hours)} HOURS : ${pad(minutes)} MINUTES : ${pad(seconds)} SECONDS`;
+    countdownTimer.textContent = `${pad(days)} HARI : ${pad(hours)} JAM : ${pad(minutes)} MENIT : ${pad(seconds)} DETIK`;
   }
 
   updateTimer();
@@ -1154,7 +1299,7 @@ function initCountdown() {
     const val = passwordInput.value.replace(/\s+/g, "").toLowerCase();
     if (val === EARLY_UNLOCK_PASSWORD) {
       passwordError.style.color = "#fff";
-      passwordError.textContent = "Correct, my love ✨";
+      passwordError.textContent = "Bener, sayang ✨";
       setTimeout(() => {
         passwordModal.classList.remove("show");
         unlockFromCountdown();
@@ -1212,6 +1357,7 @@ function startMusic() {
       state.musicPlaying = true;
       state.pendingMusicUnlock = false;
       musicIcon.textContent = "🎵";
+      musicControl.classList.add("playing");
     })
     .catch(() => {
       if (state.pendingMusicUnlock) return;
@@ -1223,6 +1369,7 @@ function startMusic() {
             state.musicPlaying = true;
             state.pendingMusicUnlock = false;
             musicIcon.textContent = "🎵";
+            musicControl.classList.add("playing");
           });
         },
         { once: true },
@@ -1235,12 +1382,14 @@ function toggleMusic() {
     bgMusic.pause();
     state.musicPlaying = false;
     musicIcon.textContent = "🔇";
+    musicControl.classList.remove("playing");
   } else {
     bgMusic
       .play()
       .then(() => {
         state.musicPlaying = true;
         musicIcon.textContent = "🎵";
+        musicControl.classList.add("playing");
       })
       .catch(() => {});
   }
