@@ -63,7 +63,7 @@ export function showWish(text, isLast) {
     // Display time: last message stays much longer
     const displayTime = isLast
       ? TIMING.finalWishDuration
-      : Math.max(TIMING.wishDuration, 1900 + text.split(/\s+/).length * 95);
+      : Math.max(TIMING.wishDuration, 3000 + text.split(/\s+/).length * 160);
 
     setTimeout(() => {
       // Fade out with scale + float up

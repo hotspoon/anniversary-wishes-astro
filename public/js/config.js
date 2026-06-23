@@ -10,8 +10,8 @@ export const state = {
 export const TIMING = {
   anniversaryRevealDelay: 500,
   anniversaryTitleDuration: 5500,
-  wishDuration: 2800,
-  finalWishDuration: 5500,
+  wishDuration: 3500,
+  finalWishDuration: 8000,
   wishFadeDuration: 700,
   messageFadeDuration: 2000,
   messageRotationDuration: 6000,
