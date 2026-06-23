@@ -1,42 +1,45 @@
 "use strict";
 
 export const countdownMessages = [
-  "Sebentar lagi ya, sayang.",
-  "Aku sengaja bikin kamu nunggu dikit.",
-  "Tenang, ini bukan prank kok.",
-  "Kejutannya nunggu waktu yang pas.",
-  "Dikit lagi sampai harinya kita.",
-  "Sabar ya, cantik.",
-  "Belum boleh dibuka... tapi hampir.",
-  "Lucu juga ya, kita sudah sejauh ini.",
-  "Makin dekat ❤️",
-  "Aku harap nanti kamu suka.",
+  "Sebentar lagi sayangkuuu.",
+  "Tungguin dulu ya sayangkuuu.",
+  "Tenang sayang, ini aku nggak ngeprank kok wkwkwkw.",
+  "Surprise tuh waktunya harus pas dong mweheheh.",
+  "Tinggal dikit lagi nih anniv kita.",
+  "Sabar ya sayangku yang cantikk.",
+  "Belum boleh dibuka cantik, tapi kalau udah kepo boleh sih ",
+  "Lucu juga ya sayang, kita sudah sejauh ini.",
+  "Udah makin dekat nih anniv kita sayang ❤️",
+  "Aku harap nanti kamu suka ya sayangku.",
 ];
 
 export const passwordWrongMessages = [
-  "Belum itu, sayang 🤍",
-  "Hampir kok.",
-  "Coba lagi ya, cantik.",
+  "Eitss passwordnya belum bener nih sayang 🤍",
+  "Yeayy hampir berhasil sayang.",
+  "Coba lagi cantikkuuuu.",
   "Kamu lucu banget pas nebak.",
-  "Dikit lagi ❤️",
+  "Dikit lagi sayang ❤️",
+  "Hintnya biasa aku panggil kamu"
 ];
 
 export const messages = [
-  "Selamat anniversary ya, sayang.",
-  "Azlia Saraswati Pramono, makasih sudah jadi orang yang paling aku tunggu kabarnya.",
-  "Sama kamu, hal-hal kecil rasanya jadi lebih enak dijalani.",
-  "Aku masih sering ngerasa beruntung karena bisa punya kamu.",
+  "Selamat anniversary sayangku yang cantiknya tiada tara ❤️❤️❤️",
+  "Azlia Saraswati Pramono, makasih ya udah jadi pasangan aku yang selalu aku tunggu kabar kamu cintakuuu.",
+  "Kalau sama kamu, hal-hal kecil rasanya jadi happy dijalani dan seneng seneng bingittt.",
+  "Aku tuh masih sering ngerasa beruntung banget karena bisa punya kamu sebagai pasangan akuuu 💕.",
   "Senyum kamu masih jadi salah satu hal favoritku.",
-  "Banyak hari biasa yang jadi kerasa spesial cuma karena ada kamu di dalamnya.",
-  "Makasih buat tawa, cerita random, marah kecil, perhatian kecil, dan semua sabar kamu.",
-  "Kalau harus milih lagi dari awal, aku tetap bakal pilih kamu.",
-  "Kamu bukan cuma pacarku, kamu rumah yang sering aku cari saat capek.",
-  "Aku suka cara kamu hadir, bahkan di hal-hal yang kelihatannya sederhana.",
-  "Makasih sudah bertahan sama aku, walau aku belum selalu jadi orang yang mudah.",
-  "Maaf untuk salahku, untuk ego yang kadang kebawa, dan untuk hari-hari waktu aku bikin kamu sedih.",
-  "Aku masih mau belajar jadi lebih baik buat kamu, pelan-pelan tapi beneran.",
-  "Semoga hari ini kamu ngerasa dicintai, bukan cuma dari kata-kata ini.",
-  "Selamat anniversary, sayang. Aku sayang kamu ❤️",
+  "Senyum manis dan imut kamu jadi salah satu paling favorit buat aku.",
+  // todo
+  "Banyak hari biasa yang jadi spesial karena ada kamu di hari hariku sayangkuu.",
+  "Makasih ya sayang buat tawa, cerita random, omelan kamu yang aku suka, marah kecil, perhatian kamu, dan semua sabar kamu.",
+  "Kalau disuruh milih lagi dari awal sih, aku bakal tetap bakal pilih kamu sayangg.",
+  "Kamu bukan cuma pacarku maniskuuu, kamu itu rumah bagi aku sayang, entah pas lagi seneng ataupun lagi sedih.",
+  "Aku seneng bingit kamu hadir dalam hidup akuu, sayang terus sama akuuu.",
+  "Makasih banyak sayangku sudah bertahan sama aku, walau aku selalu jadi orang yang nyebelin bingit mwehehehehe.",
+  "Aku minta maaf ya sayang karena aku sering salah, ego yang kadang kebawa, dan buat hari-hari pas aku bikin kamu sedih.",
+  "Aku mau belajar terus sayang jadi lebih baik buat kamu, pelan-pelan tapi pasti.",
+  "Semoga hari ini kamu ngerasa dicintai ya sayangku, bukan cuman dari kata-kataku ini.",
+  "Selamat anniversary, sayangku, cintaku, maniskuu, bidadarikuuuu. Aku sayang banget banget sama kamu ❤️",
 ];
 
 export const missMessages = [
@@ -49,7 +52,7 @@ export const missMessages = [
   "Pelan-pelan, kamu pasti bisa ✨",
 ];
 
-export const finalMessage = `Azlia Saraswati Pramono, makasih ya sudah hadir di hidupku.\n\nAku tahu aku belum sempurna. Kadang aku salah ngomong, salah paham, atau telat sadar kalau kamu lagi butuh dimengerti.\n\nTapi perasaanku ke kamu serius. Aku sayang kamu, dan aku masih mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih sudah sabar, sudah bertahan, sudah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, bahkan di hari-hari yang nggak selalu mudah.\n\nSelamat anniversary, sayang. Aku sayang kamu. ❤️`;
+export const finalMessage = `Azlia Saraswati Pramono, Sayangku yang aku sayang bingitttt, makasih ya kamu sudah hadir di hidupku.\n\nAku tahu aku belum sempurna masih banyak salah. Kadang aku salah ngomong, sering salah paham, atau telat sadar kalau sayangku lagi butuh dimengerti sama diperhatiin.\n\nTapi perasaanku ke kamu bener sayang bingittt cintakuuuu. Aku sayang bangetttt sama kamu, dan aku mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih ya sayang udah sabar sama aku, udah bertahan, udah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, Meskipun di hari hari yang kadang sulit pas kita berantem.\n\nSelamat anniversary, sayangku manisku bidadariku. Aku sayang banget banget sama kamu. ❤️`;
 
 export const mediaFiles = [
   { src: "photos/06af5522-bebc-4bd7-a4fd-c9a736572b2e.jpg", type: "image", caption: "Senyum yang bikin kangen 💕" },
@@ -60,13 +63,13 @@ export const mediaFiles = [
   { src: "photos/351862f1-0bbe-4aa3-a5bd-107f1e33fd33.jpg", type: "image", caption: "Kamu dan semua gemasmu 🌟" },
   { src: "photos/3d257f97-6cb3-4a76-968a-0c6b473a56ee.jpg", type: "image", caption: "Selalu punya cara bikin aku senyum 💫" },
   { src: "photos/452fb7df-5a15-4652-a79d-676c21eaa954.jpg", type: "image", caption: "Aku suka banget momen ini 🌹" },
-  { src: "photos/4ec86829-3f84-4a3b-92ce-5c99edd61291.jpg", type: "image", caption: "Bahagia yang sederhana ✨" },
+  { src: "photos/7117d64d-3287-40c6-b454-bcd20a1195ad.jpg", type: "image", caption: "Bahagia yang sederhana ✨", objectPosition: "center top" },
   { src: "photos/573c6d61-d171-4802-93af-ceb39a6787d4.jpg", type: "image", caption: "Momen yang mau aku simpan lama 💕" },
   { src: "photos/5b48d167-7264-427d-9e1f-e7550724cab5.jpg", type: "image", caption: "Kamu itu spesial banget 🦋" },
   { src: "photos/64a45dc1-3657-47ff-b56c-8e6eeba14722.jpg", type: "image", caption: "Lihat kamu aja udah seneng 🌷" },
-  { src: "photos/7117d64d-3287-40c6-b454-bcd20a1195ad.jpg", type: "image", caption: "Terima kasih sudah ada 🌻", objectPosition: "center top" },
+  { src: "photos/4ec86829-3f84-4a3b-92ce-5c99edd61291.jpg", type: "image", caption: "Terima kasih sudah ada 🌻" },
   { src: "photos/720b539d-149b-486f-bdad-2c3479c03e36.jpg", type: "image", caption: "Bersamamu rasanya hangat ☀️" },
-  { src: "photos/76bb1f22-47e8-4c12-a22e-558e1b5e1808.jpg", type: "image", caption: "Kamu rumahku 🏡" },
+  { src: "photos/76bb1f22-47e8-4c12-a22e-558e1b5e1808.jpg", type: "image", caption: "Kamu adalah rumahku 🏡" },
   { src: "photos/9200e5f1-036f-44ea-b534-cfe638536b26.jpg", type: "image", caption: "Canda tawa kita favoritku 😆" },
   { src: "photos/97d703e2-5bd0-42a1-bde5-fe613f0e984a.jpg", type: "image", caption: "Selalu cantik di mataku 💎" },
   { src: "photos/99719dd7-83bf-45d6-93f7-9e09eaa0cfe5.jpg", type: "image", caption: "Momen kecil, kenangan besar 🎈" },

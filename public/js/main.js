@@ -16,6 +16,8 @@ import {
   muteBtn,
   galleryBtn,
   unlockOverlay,
+  countdownTimer,
+  countdownMessage,
   setCanvasSize,
 } from "./dom.js";
 import { initStars } from "./effects/stars.js";
@@ -53,6 +55,7 @@ function onSceneEnter(name) {
     animateEndingText();
   }
   if (name === "gallery") {
+    setConfettiActive(true);
     startParticles("galleryParticles");
     buildGallery();
   }
@@ -89,18 +92,15 @@ function triggerUnlock() {
   triggerUnlockBurst();
   startMusic();
 
-  // Phase 1: gentle warm glow from center
   setTimeout(() => {
     unlockOverlay.classList.add("phase1");
   }, TIMING.unlockGlowDelay);
 
-  // Phase 2: fade to dark smoothly
   setTimeout(() => {
     unlockOverlay.classList.remove("phase1");
     unlockOverlay.classList.add("phase2");
   }, TIMING.unlockGlowDelay + 1800);
 
-  // Switch scene while screen is dark
   setTimeout(() => {
     sceneUnlock.classList.remove("active");
     sceneUnlock.style.pointerEvents = "none";
@@ -110,7 +110,6 @@ function triggerUnlock() {
     onSceneEnter("birthday");
   }, TIMING.unlockSceneSwitchDelay);
 
-  // Phase 3: fade out to reveal birthday
   setTimeout(() => {
     unlockOverlay.classList.remove("phase2");
     unlockOverlay.classList.add("phase3");
@@ -122,13 +121,47 @@ function triggerUnlock() {
 }
 
 // ============================================
+// LOADING TEXT — independent from overlay
+// ============================================
+let loadingTextEl = null;
+
+function showLoadingText(text) {
+  loadingTextEl = document.createElement("div");
+  loadingTextEl.className = "loading-text";
+  loadingTextEl.textContent = text;
+  document.body.appendChild(loadingTextEl);
+  loadingTextEl.offsetHeight;
+  loadingTextEl.classList.add("show");
+}
+
+function hideLoadingText() {
+  if (loadingTextEl) {
+    loadingTextEl.classList.remove("show");
+    loadingTextEl.classList.add("hide");
+    setTimeout(() => {
+      if (loadingTextEl && loadingTextEl.parentNode) {
+        loadingTextEl.parentNode.removeChild(loadingTextEl);
+      }
+      loadingTextEl = null;
+    }, 400);
+  }
+}
+
+// ============================================
 // UNLOCK FROM COUNTDOWN -> UNLOCK scene
 // ============================================
 function unlockFromCountdown() {
   state.unlocked = true;
 
-  // Visual transition
+  // Sembunyikan timer & message biar loading text keliatan
+  countdownTimer.style.opacity = "0";
+  countdownMessage.style.opacity = "0";
+
+  // Overlay glow mulai lambat
   unlockOverlay.classList.add("phase1");
+
+  // Loading text muncul langsung
+  showLoadingText("Sebentar ya, sayang...");
 
   if (!state.musicPlaying) {
     startMusic();
@@ -137,7 +170,7 @@ function unlockFromCountdown() {
   setTimeout(() => {
     unlockOverlay.classList.remove("phase1");
     unlockOverlay.classList.add("phase2");
-  }, 1500);
+  }, 800);
 
   setTimeout(() => {
     sceneCountdown.classList.remove("active");
@@ -147,14 +180,14 @@ function unlockFromCountdown() {
     sceneUnlock.style.pointerEvents = "all";
     state.currentScene = "unlock";
 
-    // Fade into unlock scene
+    hideLoadingText();
     unlockOverlay.classList.remove("phase2");
     unlockOverlay.classList.add("phase3");
     setTimeout(() => {
       unlockOverlay.classList.remove("phase3");
-      state.unlocked = false; // Reset unlock state for the key drag puzzle
-    }, 1500);
-  }, 2500);
+      state.unlocked = false;
+    }, 1000);
+  }, 2000);
 }
 
 // ============================================
@@ -188,6 +221,14 @@ function init() {
 
   sceneCountdown.classList.add("active");
   sceneCountdown.style.pointerEvents = "all";
+
+  if (window.location.search.includes("gallery")) {
+    setTimeout(() => {
+      sceneCountdown.classList.remove("active");
+      sceneCountdown.style.pointerEvents = "none";
+      transitionToScene("gallery");
+    }, 100);
+  }
 }
 
 window.addEventListener("DOMContentLoaded", init);

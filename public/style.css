@@ -469,7 +469,46 @@ body {
     rgba(255, 159, 207, 0) 30%,
     rgba(7, 20, 13, 0) 100%
   );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Parisienne", cursive;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: rgba(255, 248, 202, 0.8);
+  letter-spacing: 0.06em;
 }
+
+/* =============================================
+   LOADING TEXT — pulsing, independent from overlay
+   ============================================= */
+.loading-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  font-family: "Parisienne", cursive;
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  color: rgba(255, 248, 202, 0.9);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 30px rgba(255, 216, 79, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  animation: loadingPulse 2s ease-in-out infinite;
+}
+.loading-text.show {
+  opacity: 1;
+}
+.loading-text.hide {
+  opacity: 0;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
 .unlock-overlay.phase1 {
   opacity: 1;
   background: radial-gradient(
@@ -568,7 +607,8 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: clamp(1.8rem, 6vw, 4rem);
-  line-height: 1.3;
+  line-height: 1.8;
+  padding: 0.3em 0;
 }
 
 .birthday-subtitle-spacer {
