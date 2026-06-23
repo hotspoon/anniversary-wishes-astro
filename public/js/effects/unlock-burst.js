@@ -12,7 +12,7 @@ export function triggerUnlockBurst() {
   heartLock.classList.add("unlocking");
   setTimeout(() => heartLock.classList.remove("unlocking"), 2500);
 
-  Array.from({ length: 38 }, () => {
+  Array.from({ length: 20 }, () => {
     const spark = document.createElement("span");
     const angle = Math.random() * Math.PI * 2;
     const distance = randomBetween(70, 210);

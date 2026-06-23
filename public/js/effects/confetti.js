@@ -39,7 +39,7 @@ export function initConfetti() {
     alpha: randomBetween(0.5, 1),
   }));
 
-  confettiActive = true;
+  confettiActive = false;
 
   function drawStar(size) {
     const points = 5;
