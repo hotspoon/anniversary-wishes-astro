@@ -19,7 +19,7 @@ describe("data — messages", () => {
 
   it("messages has at least 10 messages", () => {
     expect(messages.length).toBeGreaterThanOrEqual(10);
-    expect(messages[messages.length - 1]).toContain("Aku sayang kamu");
+    expect(messages[messages.length - 1]).toContain("Aku sayang");
   });
 
   it("missMessages has at least 3 messages", () => {

@@ -79,7 +79,10 @@ export function initCountdown(onEnter, onPasswordSuccess) {
 
   passwordSubmit.addEventListener("click", checkPassword);
   passwordInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") checkPassword();
+    if (e.key === "Enter") {
+      e.preventDefault();
+      checkPassword();
+    }
   });
 
   function checkPassword() {

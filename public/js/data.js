@@ -27,9 +27,7 @@ export const messages = [
   "Azlia Saraswati Pramono, makasih ya udah jadi pasangan aku yang selalu aku tunggu kabar kamu cintakuuu.",
   "Kalau sama kamu, hal-hal kecil rasanya jadi happy dijalani dan seneng seneng bingittt.",
   "Aku tuh masih sering ngerasa beruntung banget karena bisa punya kamu sebagai pasangan akuuu 💕.",
-  "Senyum kamu masih jadi salah satu hal favoritku.",
   "Senyum manis dan imut kamu jadi salah satu paling favorit buat aku.",
-  // todo
   "Banyak hari biasa yang jadi spesial karena ada kamu di hari hariku sayangkuu.",
   "Makasih ya sayang buat tawa, cerita random, omelan kamu yang aku suka, marah kecil, perhatian kamu, dan semua sabar kamu.",
   "Kalau disuruh milih lagi dari awal sih, aku bakal tetap bakal pilih kamu sayangg.",
@@ -52,7 +50,7 @@ export const missMessages = [
   "Pelan-pelan, kamu pasti bisa ✨",
 ];
 
-export const finalMessage = `Azlia Saraswati Pramono, Sayangku yang aku sayang bingitttt, makasih ya kamu sudah hadir di hidupku.\n\nAku tahu aku belum sempurna masih banyak salah. Kadang aku salah ngomong, sering salah paham, atau telat sadar kalau sayangku lagi butuh dimengerti sama diperhatiin.\n\nTapi perasaanku ke kamu bener sayang bingittt cintakuuuu. Aku sayang bangetttt sama kamu, dan aku mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih ya sayang udah sabar sama aku, udah bertahan, udah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, Meskipun di hari hari yang kadang sulit pas kita berantem.\n\nSelamat anniversary, sayangku manisku bidadariku. Aku sayang banget banget sama kamu. ❤️`;
+export const finalMessage = `Azlia Saraswati Pramono, Sayangku yang aku sayang bingitttt, makasih ya kamu sudah hadir di hidupku.\n\nAku tahu aku sebagai pasangan belum sempurna dan masih punya banyak salah. Kadang aku salah ngomong, sering salah paham, atau telat sadar kalau sayangku lagi butuh dimengerti sama diperhatiin.\n\nTapi perasaan aku ke kamu tuh beneran sayang bingittt cintakuuuu. Aku sayang bangetttt sama kamu, dan aku mau terus belajar jadi orang yang lebih baik buat kamu sayang.\n\nMakasih ya sayang udah sabar sama aku, udah bertahan, udah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih satu sama lain yaa, Meskipun di hari hari yang kadang sulit pas kita berantem.\n\nSelamat anniversary, sayangku manisku bidadariku. Aku sayang banget banget sama kamu. ❤️`;
 
 export const mediaFiles = [
   { src: "photos/06af5522-bebc-4bd7-a4fd-c9a736572b2e.jpg", type: "image", caption: "Senyum yang bikin kangen 💕" },
