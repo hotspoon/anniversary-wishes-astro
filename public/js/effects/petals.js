@@ -5,6 +5,10 @@ import { petalCanvas, randomBetween, randomFrom, px, setCanvasSize } from "../do
 let petals = [];
 export let petalActive = false;
 
+export function setPetalActive(value) {
+  petalActive = value;
+}
+
 export function triggerPetalBurst() {
   setCanvasSize(petalCanvas);
   const ctx = petalCanvas.getContext("2d");
@@ -48,17 +52,10 @@ export function triggerPetalBurst() {
     ctx.globalAlpha = alpha;
 
     ctx.beginPath();
-    ctx.moveTo(0, -size);
-    ctx.bezierCurveTo(size * 0.8, -size * 0.5, size * 0.6, size * 0.5, 0, size);
-    ctx.bezierCurveTo(
-      -size * 0.6,
-      size * 0.5,
-      -size * 0.8,
-      -size * 0.5,
-      0,
-      -size,
-    );
-    ctx.closePath();
+    ctx.moveTo(0, 0);
+    ctx.bezierCurveTo(size * 1.2, -size * 0.6, size * 0.8, -size * 0.8, 0, -size);
+    ctx.bezierCurveTo(-size * 0.8, -size * 0.8, -size * 1.2, -size * 0.6, 0, 0);
+
     ctx.fillStyle = color.fill;
     ctx.fill();
     ctx.strokeStyle = color.stroke;
@@ -66,13 +63,11 @@ export function triggerPetalBurst() {
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.moveTo(0, -size * 0.7);
-    ctx.lineTo(0, size * 0.6);
-    ctx.strokeStyle = color.stroke;
-    ctx.lineWidth = 0.3;
-    ctx.globalAlpha = alpha * 0.4;
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, -size * 0.6);
+    ctx.strokeStyle = "rgba(255,255,255,0.34)";
+    ctx.lineWidth = 1;
     ctx.stroke();
-
     ctx.restore();
   }
 
@@ -87,9 +82,10 @@ export function triggerPetalBurst() {
 
       p.wobblePhase += p.wobbleSpeed;
       p.x += p.vx + Math.sin(p.wobblePhase) * 2.5;
-      p.vy += 0.3; // Gravity
+      p.vy += 0.25;
       p.y += p.vy;
       p.rotation += p.rotSpeed;
+      p.alpha = Math.max(0, p.alpha - 0.002);
 
       drawPetal(ctx, p.x, p.y, p.size, p.rotation, p.color, p.alpha);
     });

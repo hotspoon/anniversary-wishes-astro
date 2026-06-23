@@ -12,25 +12,15 @@ export function buildGallery() {
 }
 
 export function createMediaElement(media, className) {
-  const element = document.createElement(
-    media.type === "video" ? "video" : "img",
-  );
+  const element = document.createElement("img");
   element.className = className;
   if (media.missing) element.classList.add("missing-media");
 
-  if (media.type === "video") {
-    element.src = media.src;
-    element.autoplay = true;
-    element.muted = true;
-    element.loop = true;
-    element.playsInline = true;
-  } else {
-    element.src = media.src;
-    element.alt = media.caption;
-    element.loading = "lazy";
-    if (media.objectPosition) {
-      element.style.objectPosition = media.objectPosition;
-    }
+  element.src = media.src;
+  element.alt = media.caption;
+  element.loading = "eager";
+  if (media.objectPosition) {
+    element.style.objectPosition = media.objectPosition;
   }
 
   return element;

@@ -5,6 +5,10 @@ import { confettiCanvas, randomBetween, randomFrom, px, setCanvasSize } from "..
 let confettiPieces = [];
 export let confettiActive = false;
 
+export function setConfettiActive(value) {
+  confettiActive = value;
+}
+
 export function initConfetti() {
   setCanvasSize(confettiCanvas);
   const ctx = confettiCanvas.getContext("2d");

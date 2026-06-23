@@ -19,8 +19,8 @@ import {
   setCanvasSize,
 } from "./dom.js";
 import { initStars } from "./effects/stars.js";
-import { initConfetti, confettiActive } from "./effects/confetti.js";
-import { petalActive } from "./effects/petals.js";
+import { initConfetti, setConfettiActive } from "./effects/confetti.js";
+import { setPetalActive } from "./effects/petals.js";
 import { drawCursor, resizeCursorCanvas } from "./effects/cursor.js";
 import { startParticles } from "./effects/particles.js";
 import { startFloatingHearts } from "./effects/particles.js";
@@ -37,8 +37,8 @@ import { startMusic, toggleMusic } from "./audio.js";
 // ============================================
 function onSceneEnter(name) {
   if (name === "birthday") {
-    confettiActive = true;
-    petalActive = true;
+    setConfettiActive(true);
+    setPetalActive(true);
     startParticles("particlesBg");
     showBirthdayReveal(() => {
       setTimeout(() => {
@@ -47,8 +47,8 @@ function onSceneEnter(name) {
     });
   }
   if (name === "ending") {
-    confettiActive = false;
-    petalActive = false;
+    setConfettiActive(false);
+    setPetalActive(false);
     startParticles("endingParticles");
     animateEndingText();
   }
@@ -77,7 +77,7 @@ function transitionToScene(sceneName) {
 }
 
 // ============================================
-// TRIGGER UNLOCK (from drag puzzle → birthday)
+// TRIGGER UNLOCK (from drag puzzle -> birthday)
 // ============================================
 function triggerUnlock() {
   if (state.unlocked) return;
@@ -122,7 +122,7 @@ function triggerUnlock() {
 }
 
 // ============================================
-// UNLOCK FROM COUNTDOWN → UNLOCK scene
+// UNLOCK FROM COUNTDOWN -> UNLOCK scene
 // ============================================
 function unlockFromCountdown() {
   state.unlocked = true;

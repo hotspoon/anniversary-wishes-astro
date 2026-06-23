@@ -28,7 +28,7 @@ const {
   buildGallery,
 } = await import("../public/js/scenes/gallery.js");
 
-describe("gallery — createMediaElement", () => {
+describe("gallery \u2014 createMediaElement", () => {
   it("creates an img element for image type", () => {
     const media = { src: "photos/test.jpg", type: "image", caption: "Test" };
     const el = createMediaElement(media, "test-class");
@@ -36,7 +36,7 @@ describe("gallery — createMediaElement", () => {
     expect(el.className).toBe("test-class");
     expect(el.src).toContain("test.jpg");
     expect(el.alt).toBe("Test");
-    expect(el.loading).toBe("lazy");
+    expect(el.loading).toBe("eager");
   });
 
   it("applies objectPosition when present", () => {
@@ -58,16 +58,16 @@ describe("gallery — createMediaElement", () => {
   });
 });
 
-describe("gallery — createCaption", () => {
+describe("gallery \u2014 createCaption", () => {
   it("creates a div with text content", () => {
-    const caption = createCaption("Hello 💕", "cap-class");
+    const caption = createCaption("Hello \u2764\ufe0f", "cap-class");
     expect(caption.tagName).toBe("DIV");
     expect(caption.className).toBe("cap-class");
-    expect(caption.textContent).toBe("Hello 💕");
+    expect(caption.textContent).toBe("Hello \u2764\ufe0f");
   });
 });
 
-describe("gallery — buildFeaturedFrames", () => {
+describe("gallery \u2014 buildFeaturedFrames", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockFeaturedFrames.replaceChildren = vi.fn();
@@ -80,12 +80,12 @@ describe("gallery — buildFeaturedFrames", () => {
     mockMediaFiles = [
       { src: "photos/1.jpg", type: "image", caption: "Satu" },
       { src: "photos/2.jpg", type: "image", caption: "Dua" },
-      { src: "photos/3.jpg", type: "image", caption: "Tiga ❤️" },
+      { src: "photos/3.jpg", type: "image", caption: "Tiga \u2764\ufe0f" },
       { src: "photos/4.jpg", type: "image", caption: "Empat" },
       { src: "photos/5.jpg", type: "image", caption: "Lima" },
       { src: "photos/6.jpg", type: "image", caption: "Enam" },
       { src: "photos/7.jpg", type: "image", caption: "Tujuh" },
-      { src: "photos/8.jpg", type: "image", caption: "Delapan 🌹" },
+      { src: "photos/8.jpg", type: "image", caption: "Delapan \ud83c\udf39" },
       { src: "photos/9.jpg", type: "image", caption: "Sembilan" },
       { src: "photos/10.jpg", type: "image", caption: "Sepuluh" },
       { src: "photos/11.jpg", type: "image", caption: "Sebelas" },
@@ -125,7 +125,7 @@ describe("gallery — buildFeaturedFrames", () => {
   });
 });
 
-describe("gallery — buildRemainingGallery", () => {
+describe("gallery \u2014 buildRemainingGallery", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     mockFeaturedFrames.replaceChildren = vi.fn();
@@ -145,7 +145,7 @@ describe("gallery — buildRemainingGallery", () => {
     mockMediaFiles = [
       { src: "photos/1.jpg", type: "image", caption: "Satu" },
       { src: "photos/2.jpg", type: "image", caption: "Dua" },
-      { src: "photos/3.jpg", type: "image", caption: "Tiga ❤️" },
+      { src: "photos/3.jpg", type: "image", caption: "Tiga \u2764\ufe0f" },
       { src: "photos/4.jpg", type: "image", caption: "Empat" },
       { src: "photos/5.jpg", type: "image", caption: "Lima" },
       { src: "photos/6.jpg", type: "image", caption: "Enam" },
