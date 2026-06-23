@@ -51,7 +51,7 @@ const passwordWrongMessages = [
 
 const messages = [
   "Selamat anniversary ya, sayang.",
-  "Azlia Saraswati, makasih sudah jadi orang yang paling aku tunggu kabarnya.",
+  "Azlia Saraswati Pramono, makasih sudah jadi orang yang paling aku tunggu kabarnya.",
   "Sama kamu, hal-hal kecil rasanya jadi lebih enak dijalani.",
   "Aku masih sering ngerasa beruntung karena bisa punya kamu.",
   "Senyum kamu masih jadi salah satu hal favoritku.",
@@ -77,7 +77,7 @@ const missMessages = [
   "Pelan-pelan, kamu pasti bisa ✨",
 ];
 
-const finalMessage = `Azlia Saraswati, makasih ya sudah hadir di hidupku.\n\nAku tahu aku belum sempurna. Kadang aku salah ngomong, salah paham, atau telat sadar kalau kamu lagi butuh dimengerti.\n\nTapi perasaanku ke kamu serius. Aku sayang kamu, dan aku masih mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih sudah sabar, sudah bertahan, sudah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, bahkan di hari-hari yang nggak selalu mudah.\n\nSelamat anniversary, sayang. Aku sayang kamu. ❤️`;
+const finalMessage = `Azlia Saraswati Pramono, makasih ya sudah hadir di hidupku.\n\nAku tahu aku belum sempurna. Kadang aku salah ngomong, salah paham, atau telat sadar kalau kamu lagi butuh dimengerti.\n\nTapi perasaanku ke kamu serius. Aku sayang kamu, dan aku masih mau terus belajar jadi orang yang lebih baik buat kamu.\n\nMakasih sudah sabar, sudah bertahan, sudah sayang sama aku dengan caramu sendiri.\n\nSemoga kita tetap punya banyak alasan untuk saling memilih, bahkan di hari-hari yang nggak selalu mudah.\n\nSelamat anniversary, sayang. Aku sayang kamu. ❤️`;
 
 // All media files — June photo slots use the newest available uploads.
 const mediaFiles = [
@@ -961,7 +961,8 @@ function buildWishText(container, text) {
   const accentWords = new Set([
     "anniversary",
     "Azlia",
-    "Saraswati,",
+    "Saraswati",
+    "Pramono,",
     "sayang.",
     "sayang",
     "beruntung",

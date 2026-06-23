@@ -15,6 +15,8 @@
   --dark-bg: #07140d;
   --dark-mid: #0d2418;
   --dark-rose: #17381f;
+  --dark-pink: #3d1528;
+  --dark-yellow: #2e2a10;
   --gold: #ffd84f;
   --gold-light: #fff3a6;
   --text-light: rgba(255, 255, 255, 0.92);
@@ -36,7 +38,13 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: var(--dark-bg);
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    var(--dark-pink) 0%,
+    var(--dark-rose) 35%,
+    var(--dark-mid) 60%,
+    var(--dark-bg) 100%
+  );
   color: var(--text-light);
   overflow: hidden;
   height: 100vh;
@@ -158,9 +166,10 @@ body {
    ============================================= */
 #scene-unlock {
   background: radial-gradient(
-    ellipse at center,
-    rgba(23, 56, 31, 0.76) 0%,
-    rgba(13, 36, 24, 0.56) 60%,
+    ellipse at 70% 30%,
+    rgba(61, 21, 40, 0.7) 0%,
+    rgba(46, 42, 16, 0.5) 30%,
+    rgba(23, 56, 31, 0.65) 60%,
     rgba(7, 20, 13, 0.48) 100%
   );
   z-index: 2;
@@ -488,9 +497,10 @@ body {
    ============================================= */
 #scene-birthday {
   background: radial-gradient(
-    ellipse at 30% 40%,
-    rgba(28, 78, 43, 0.82) 0%,
-    rgba(25, 42, 22, 0.74) 50%,
+    ellipse at 30% 30%,
+    rgba(61, 21, 40, 0.65) 0%,
+    rgba(23, 56, 31, 0.7) 35%,
+    rgba(46, 42, 16, 0.45) 65%,
     rgba(7, 20, 13, 0.58) 100%
   );
   flex-direction: column;
@@ -677,9 +687,10 @@ body {
    ============================================= */
 #scene-ending {
   background: radial-gradient(
-    ellipse at center,
-    rgba(23, 56, 31, 0.88) 0%,
-    rgba(11, 30, 20, 0.82) 50%,
+    ellipse at 60% 40%,
+    rgba(61, 21, 40, 0.55) 0%,
+    rgba(23, 56, 31, 0.78) 40%,
+    rgba(46, 42, 16, 0.4) 70%,
     rgba(4, 15, 9, 0.75) 100%
   );
   z-index: 2;
@@ -694,9 +705,10 @@ body {
   width: 100%;
   height: 100%;
   background: radial-gradient(
-    ellipse at center,
-    #17381f 0%,
-    #0b1e14 50%,
+    ellipse at 30% 50%,
+    #3d1528 0%,
+    #17381f 35%,
+    #0b1e14 70%,
     #040f09 100%
   );
   z-index: 0;
@@ -820,8 +832,9 @@ body {
 #scene-gallery {
   background: radial-gradient(
     ellipse at 20% 20%,
-    rgba(23, 56, 31, 0.86) 0%,
-    rgba(11, 30, 20, 0.82) 40%,
+    rgba(61, 21, 40, 0.6) 0%,
+    rgba(23, 56, 31, 0.75) 35%,
+    rgba(46, 42, 16, 0.38) 60%,
     rgba(4, 15, 9, 0.74) 100%
   );
   overflow: hidden;
@@ -837,8 +850,9 @@ body {
   height: 100%;
   background: radial-gradient(
     ellipse at 20% 20%,
-    #17381f 0%,
-    #0b1e14 40%,
+    #3d1528 0%,
+    #17381f 30%,
+    #2e2a10 55%,
     #040f09 100%
   );
   z-index: 0;
@@ -1250,7 +1264,13 @@ body {
    SCENE 0 — COUNTDOWN
    ============================================= */
 #scene-countdown {
-  background: var(--dark-bg);
+  background: radial-gradient(
+    ellipse at 50% 30%,
+    var(--dark-pink) 0%,
+    var(--dark-rose) 40%,
+    var(--dark-mid) 70%,
+    var(--dark-bg) 100%
+  );
   z-index: 3;
 }
 
