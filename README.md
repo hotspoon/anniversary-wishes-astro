@@ -1,6 +1,6 @@
 # Anniversary Wishes Astro
 
-Astro migration of the interactive anniversary wishes page for Azlia Saraswati Pramono.
+Astro migration of the interactive anniversary wishes page for My Love.
 
 ## Run locally
 
