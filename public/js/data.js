@@ -57,7 +57,7 @@ export const mediaFiles = [
   { src: "photos/0c662fc8-a4f9-476f-a4f4-e3aca31bd922.jpg", type: "image", caption: "Yang paling aku cari 🌸" },
   { src: "photos/15561f40-4577-4dbb-b411-454e558889ef.jpg", type: "image", caption: "Orang favoritku ❤️" },
   { src: "photos/1b946bb8-ac36-4532-a075-be4a4e127fd8.jpg", type: "image", caption: "Cantiknya sayang aku ✨" },
-  { src: "photos/4ec86829-3f84-4a3b-92ce-5c99edd61291.jpg", type: "image", caption: "Setiap momen berharga 💖" },
+  { src: "photos/452fb7df-5a15-4652-a79d-676c21eaa954.jpg", type: "image", caption: "Setiap momen berharga 💖" },
   { src: "photos/351862f1-0bbe-4aa3-a5bd-107f1e33fd33.jpg", type: "image", caption: "Kamu yang gemesin bingitt 🌟" },
   { src: "photos/3d257f97-6cb3-4a76-968a-0c6b473a56ee.jpg", type: "image", caption: "Selalu punya cara bikin aku senyum 💫" },
   { src: "photos/452fb7df-5a15-4652-a79d-676c21eaa954.jpg", type: "image", caption: "Aku sayang banget sama kamu 🌹" },
