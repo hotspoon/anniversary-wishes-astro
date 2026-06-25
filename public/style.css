@@ -1506,7 +1506,9 @@ body {
 
 .open-sooner-wrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: max(50px, env(safe-area-inset-bottom, 90px));
+  width: 100%;
+  text-align: center;
 }
 
 .open-sooner-btn {
